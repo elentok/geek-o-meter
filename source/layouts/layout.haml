@@ -9,8 +9,14 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     %title= current_page.data.title || "The Middleman"
     
-    = stylesheet_link_tag "all"
-    = javascript_include_tag  "all"
+    = stylesheet_link_tag |
+      "//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css", |
+      "app"
+
+    = javascript_include_tag |
+      "//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js", |
+      "app"
+    
   
   %body{class: page_classes}
     = yield
