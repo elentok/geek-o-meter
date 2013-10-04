@@ -69,3 +69,12 @@ configure :build do
   # Or use a different image path
   # set :http_path, "/Content/images/"
 end
+
+if File.exists? 'deploy.yml'
+  activate :deploy do |deploy|
+    YAML.load_file('deploy.yml').each do |key, value|
+      deploy.method = :rsync
+      deploy.send("#{key.to_sym}=", value)
+    end
+  end
+end
