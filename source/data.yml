@@ -1,0 +1,31 @@
+shows:
+  'Star wars':
+    characters:
+      - Yoda
+      - Obi-Wan
+      - Luke Skywalker
+      - Padme Amidala
+      - Han Solo
+      - Boba Fett
+      - Lando Calrissian
+    terms:
+      - Padawan
+      - Sith
+      - X-Wing
+      - Tie Fighter
+      - Death Star
+
+  'Star trek':
+    characters:
+      - Q
+      - Quark
+      - Jean-Luc Picard
+      - James T. Kirk
+      - Benjamin Sisko
+    terms:
+      - The Borg
+      - Rules of Acquisition
+      - Klingon
+      - Qapla'
+      - Warp D
+      - Defiant

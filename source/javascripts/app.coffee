@@ -1,7 +1,8 @@
 #= require_tree .
 
-angular.module 'geekOmeter', []
-
-@MainCtrl = ($scope) ->
-  console.log "main controller initialized"
+angular.module('geekOmeter', ['geekOmeter.questions']).
+  controller 'MainCtrl', ['$scope', 'questions', ($scope, questions) ->
+    console.log "main controller initialized"
+    console.log "questions", questions
+  ]
 
