@@ -38,7 +38,6 @@ shows:
       - Jack O'Neill
     terms:
       - Shol'va
-      - Replicators
       - Goa'uld
       - Jaffa
       - Daedalus
@@ -71,9 +70,14 @@ shows:
   'Lord of the rings':
     characters:
       - Saruman
-      - Bilbo
-      - Frodo
+      - Frodo Baggins
+      - Sméagol
+      - Legolas
+      - Aragorn
     terms:
       - Anduril
       - Palantir
       - Minas Tirith
+      - Mithril
+      - Rivendell
+
