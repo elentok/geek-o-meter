@@ -29,7 +29,12 @@ h1, h2, h3 {
   padding-bottom: 40px;
   text-align: center;
 
+  @media (max-width: 480px) {
+    padding-top: 0;
+  }
+
   .frontpage {
+
     h1 {
       margin-bottom: 40px;
     }
@@ -41,6 +46,11 @@ h1, h2, h3 {
       font-size: 40px;
       white-space: normal;
       line-height: 50px;
+
+      @media (max-width: 480px) {
+        font-size: 30px;
+        line-height: 40px;
+      }
     }
   }
 
@@ -51,6 +61,11 @@ h1, h2, h3 {
       /*background-color: #b8d0e9;*/
       /*border-radius: 4px;*/
       line-height: 120px;
+
+      @media (max-width: 480px) {
+        line-height: 50px;
+        font-size: 40px;
+      }
     }
 
     ul.options {
@@ -68,6 +83,15 @@ h1, h2, h3 {
           line-height: 50px;
           font-size: 30px;
           display: inline-block;
+        }
+
+        @media (max-width: 480px) {
+          margin-bottom: 10px;
+          margin-right: 10px;
+          a {
+            font-size: 20px;
+            line-height: 30px;
+          }
         }
       }
     }
