@@ -2,9 +2,7 @@
 
 angular.module('geekOmeter.questions', ['geekOmeter.data']).
   factory 'questions', [ 'data', (data) ->
-    console.log "creating questions from", data
     questions = []
-    console.log "", data.shows
     showNames = (name for name, show of data.shows)
 
     for showName, show of data.shows
