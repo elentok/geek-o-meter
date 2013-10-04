@@ -7,16 +7,25 @@ ng_app: geekOmeter
   .header
     %h1 Geek-o-meter
 
-  .status
-    Question {{questionIndex+1}} of {{questions.length}}
+  .questions{'ng-show' => '!isDone'}
+    .status
+      Question {{questionIndex+1}} of {{questions.length}}
 
-  .question
-    %h2.text {{question.text}}
-    %ul.options{'ng-show' => '!errorVisible'}
-      %li{'ng-repeat' => 'option in question.options'}
-        %button.btn.btn-primary{'ng-click' => 'answer(option)'} {{option}}
+    .question
+      %h3 Match the term:
+      %h2.text {{question.text}}
 
-    %h2.alert.alert-danger{'ng-show' => 'errorVisible'}
-      {{errorMessage}},
-      %a{href: '', 'ng-click' => 'next()'} Next
+      .options-container{'ng-show' => '!errorVisible'}
+        %h3 To a franchise:
+        %ul.options
+          %li{'ng-repeat' => 'option in question.options'}
+            %button.btn.btn-primary{'ng-click' => 'answer(option)'} {{option}}
 
+      %h2.alert.alert-danger{'ng-show' => 'errorVisible'}
+        {{errorMessage}},
+        %a{href: '', 'ng-click' => 'next()'} Next
+
+  .result{'ng-show' => 'isDone'} 
+    %h1.alert.alert-success
+      Your score is {{score}}
+      %small (out of a 100)

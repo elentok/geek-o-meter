@@ -4,6 +4,8 @@ angular.module('geekOmeter', ['geekOmeter.questions']).
   controller 'MainCtrl', ['$scope', 'questions', ($scope, questions) ->
     $scope.errorVisible = false
     $scope.questions = questions
+    $scope.successfulAnswers = 0
+    $scope.isDone = false
 
     setQuestion = (index) ->
       if index >= 0 and index < questions.length
@@ -19,9 +21,14 @@ angular.module('geekOmeter', ['geekOmeter.questions']).
       else
         $scope.errorMessage = ''
         $scope.errorVisible = false
+      
+    done = ->
+      $scope.score = parseInt($scope.successfulAnswers * 100 / questions.length, 10)
+      $scope.isDone = true
 
     $scope.answer = (option) ->
       if option == $scope.question.answer
+        $scope.successfulAnswers++
         $scope.errorVisible = false
         @next()
       else
@@ -30,6 +37,9 @@ angular.module('geekOmeter', ['geekOmeter.questions']).
 
     $scope.next = ->
       setError(null)
-      setQuestion($scope.questionIndex + 1)
+      if $scope.questionIndex + 1 == questions.length
+        done()
+      else
+        setQuestion($scope.questionIndex + 1)
   ]
 
