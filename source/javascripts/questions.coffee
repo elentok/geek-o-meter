@@ -21,6 +21,6 @@ angular.module('geekOmeter.questions', ['geekOmeter.data']).
           options: showNames
         }
 
-    questions
+    _.shuffle(questions)
   ]
 

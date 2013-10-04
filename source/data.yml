@@ -29,3 +29,52 @@ shows:
       - Qapla'
       - Warp D
       - Defiant
+
+  Stargate:
+    characters:
+      - Anubis
+      - Teal'c
+      - Samantha Carter
+      - Daniel Jackson
+      - Jack O'Neill
+    terms:
+      - Shol'va
+      - Replicators
+      - Goa'uld
+      - Jaffa
+      - Daedalus
+      - Ori
+      - Ark of Truth
+
+  Battlestar:
+    characters:
+      - Starbuck
+      - Admiral Adama
+      - Gaius Baltar
+      - Boomer
+    terms:
+      - Cylon
+      - FTL
+      - CAG
+      - Frak
+
+  Andromeda:
+    characters:
+      - Drago Museveni
+      - Tyr Anasazi
+      - Dylan Hunt
+      - Seamus Harper
+    terms:
+      - Slipstream
+      - Rev Bem
+      - Commonwealth
+
+  'Lord of the rings':
+    characters:
+      - Saruman
+      - Bilbo
+      - Frodo
+    terms:
+      - Anduril
+      - Palantir
+      - Minas Tirith

@@ -3,4 +3,20 @@ title: Geek-o-meter
 ng_app: geekOmeter
 ---
 
-.app{'ng-controller' => 'MainCtrl'}
+.container{'ng-controller' => 'MainCtrl'}
+  .header
+    %h1 Geek-o-meter
+
+  .status
+    Question {{questionIndex+1}} of {{questions.length}}
+
+  .question
+    %h2.text {{question.text}}
+    %ul.options{'ng-show' => '!errorVisible'}
+      %li{'ng-repeat' => 'option in question.options'}
+        %button.btn.btn-primary{'ng-click' => 'answer(option)'} {{option}}
+
+    %h2.alert.alert-danger{'ng-show' => 'errorVisible'}
+      {{errorMessage}},
+      %a{href: '', 'ng-click' => 'next()'} Next
+
