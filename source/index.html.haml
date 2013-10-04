@@ -14,18 +14,18 @@ ng_app: geekOmeter
       .frontpage{'ng-show' => 'state == "frontpage"'}
         %h1 Welcome to Geek-o-meter
         %h2 This game will show you how geeky you are
-        %button.btn.btn-success{'ng-click' => 'start()'} Click here to start
+        %a.btn.btn-success{href: '', 'ng-click' => 'start()'} Click here to start
 
       .questions{'ng-show' => 'state == "playing"'}
         .question
-          %h3 Match the term:
+          %h3 Match:
           %h2.text {{question.text}}
 
           .options-container{'ng-show' => '!errorVisible'}
             %h3 To a franchise:
             %ul.options
               %li{'ng-repeat' => 'option in question.options'}
-                %button.btn.btn-primary{'ng-click' => 'answer(option)'} {{option}}
+                %a.btn.btn-primary{href: '', 'ng-click' => 'answer(option)'} {{option}}
 
           %h2.alert.alert-danger{'ng-show' => 'errorVisible'}
             {{errorMessage}},
