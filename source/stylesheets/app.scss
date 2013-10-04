@@ -1,34 +1,86 @@
+$font: 'Walter Turncoat', sans-serif;
+$bg: #b8d0e9;
+
+body {
+  font-family: $font;
+  background-color: $bg;
+}
+
+h1, h2, h3 {
+  font-family: $font;
+}
+
 .header {
   h1 {
-    font-size: 20px;
+    font-size: 30px;
+    line-height: 60px;
+    margin: 0;
+  }
+
+  .status {
+    float: right;
+    line-height: 60px;
   }
 }
 
-.question {
+.contents {
+  background-color: white;
+  padding-top: 30px;
+  padding-bottom: 40px;
   text-align: center;
 
-  .text {
-    font-size: 40px;
-    background-color: #b8d0e9;
-    border-radius: 4px;
-    line-height: 120px;
+  .frontpage {
+    h1 {
+      margin-bottom: 40px;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    button {
+      margin-top: 30px;
+      font-size: 40px;
+    }
   }
 
-  ul.options {
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    li {
-      display: inline-block;
-      margin-right: 10px;
-      &:last-child {
-        margin-right: 0px;
-      }
-      button {
-        line-height: 50px;
-        font-size: 30px;
+  .question {
+    .text {
+      color: #468847;
+      font-size: 50px;
+      /*background-color: #b8d0e9;*/
+      /*border-radius: 4px;*/
+      line-height: 120px;
+    }
+
+    ul.options {
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      li {
         display: inline-block;
+        margin-right: 10px;
+        &:last-child {
+          margin-right: 0px;
+        }
+        button {
+          line-height: 50px;
+          font-size: 30px;
+          display: inline-block;
+        }
       }
     }
   }
+
+  .result {
+    color: #468847;
+    h1 {
+      line-height: 200px;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.footer {
+  padding-top: 10px;
+  text-align: center;
 }
